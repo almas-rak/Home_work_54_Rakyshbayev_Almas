@@ -3,11 +3,12 @@ from django.conf.urls.static import static
 from django.urls import path
 
 from my_market.views.base import index_view
-from my_market.views.test_views import image_upload_view
+from my_market.views.add_view import add_product_view
+
 
 urlpatterns = [
     path('', index_view),
-    path('upload/', image_upload_view),
+    path('add/product/', add_product_view)
 ]
 
 if settings.DEBUG:
