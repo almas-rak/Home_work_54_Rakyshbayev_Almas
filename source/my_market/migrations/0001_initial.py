@@ -5,7 +5,6 @@ import django.db.models.deletion
 
 
 class Migration(migrations.Migration):
-
     initial = True
 
     dependencies = [
@@ -28,8 +27,10 @@ class Migration(migrations.Migration):
                 ('description', models.TextField(blank=True, max_length=2000, null=True, verbose_name='Описание')),
                 ('add_date_time', models.DateTimeField(auto_now_add=True, verbose_name='Дата и время добавления')),
                 ('price', models.DecimalField(decimal_places=2, max_digits=11, verbose_name='Стоимость')),
-                ('image', models.ImageField(default='default/placeholder.png', upload_to='product/%Y/%m/%d', verbose_name='Картинка')),
-                ('category', models.ForeignKey(on_delete=django.db.models.deletion.PROTECT, related_name='category', to='my_market.category')),
+                ('image', models.ImageField(default='default/placeholder.png', upload_to='product/%Y/%m/%d',
+                                            verbose_name='Картинка')),
+                ('category', models.ForeignKey(on_delete=django.db.models.deletion.PROTECT, related_name='category',
+                                               to='my_market.category')),
             ],
         ),
     ]
