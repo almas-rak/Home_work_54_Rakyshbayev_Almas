@@ -10,13 +10,21 @@
     <link rel="stylesheet" href="{% static 'css/dark_mode.css' %}">
     <link rel="stylesheet" href="{% static 'css/nav_sidebar.css' %}">
     <script src="{% static 'js/nav_sidebar.js' %}" defer></script>
-    <link rel="stylesheet" href="{% static 'css/dashboard.css' %}">
+    <link rel="stylesheet" href="{% static 'css/forms.css' %}">
+    <script src="{% static 'js/vendor/jquery/jquery.js' %}"></script>
+    <script src="{% static 'js/jquery.init.js' %}"></script>
+    <script src="{% static 'js/core.js' %}"></script>
+    <script src="{% static 'js/admin/RelatedObjectLookups.js' %}"></script>
+    <script src="{% static 'js/actions.js' %}"></script>
+    <script src="{% static 'js/urlify.js' %}"></script>
+    <script src="{% static 'js/prepopulate.js' %}"></script>
+    <script src="{% static 'js/vendor/xregexp/xregexp.js' %}"></script>
     <link rel="stylesheet" href="{% static 'css/responsive.css' %}">
-    <meta name="robots" content="NONE,NOARCHIVE">
+    
     <link rel="stylesheet" href="{% static 'css/style.css' %}">
 </head>
 <body>
-    <div id="container">
+    
         <div id="header">
             <div id="branding">
                 <h1 id="site-name"><a href="/">My Market</a></h1>
@@ -24,13 +32,17 @@
             <div id="user-tools">
                 <a href="#">Products</a> |
                 <a href="#">Categories</a> |
-                <a href="#">Add Product</a> |
+                <a href="/add/product/">Add Product</a> |
                 <a href="#">Add Category</a>
             </div>
         </div>
-        <div class="breadcrumbs"></div>
-
-        {% block content %}{% endblock content %}
-    </div>
+        <div class="breadcrumbs">
+        </div>
+        <div  class="container">
+            
+            
+                {% block content %}{% endblock content %}
+            
+        </div>
 </body>
 </html>

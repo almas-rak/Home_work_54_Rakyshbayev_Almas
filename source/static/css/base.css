@@ -797,7 +797,8 @@ a.deletelink:focus, a.deletelink:hover {
     min-width: 980px;
     padding: 0;
     display: flex;
-    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: space-around;
     height: 100%;
 }
 

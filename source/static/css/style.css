@@ -1,4 +1,53 @@
-.table-todo{
-    max-width: 70%;
-    margin: 0 auto;
+body{
+    background: #dbdee966;
+}
+.container{
+    
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    
+    
+  
+}
+
+.content{
+    display: flex;
+    padding: 20px;
+    width: 90%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+
+.card-main{
+    margin: 40px 15px;
+    padding: 10px;
+    display: flex;
+    width: 400px;
+    height: 200px;
+    border: 1px solid black;
+    /* background:#79aec8; */
+
+}
+
+.cont-image-main-card{
+    max-width: 250px;
+    max-height: 250px;
+    margin: 5px;
+}
+
+.image-main-card{
+    width: 100%;
+    height: 100%;
+}
+
+.description-card-main{
+    width: 250px;
+    height: 250px;
+    margin: 5px;
+}
+p{
+    display: inline-block;
 }
