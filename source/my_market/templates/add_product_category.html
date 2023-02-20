@@ -4,6 +4,10 @@
 <div id="content-main">
     <form action="" method="POST">
         {% csrf_token %}
+        {% if field.errors %}
+            <div class="alert alert-danger">{{ field.errors }}</div>
+        {% endif %}
+
         <table>
             {{ form }}
         </table>
