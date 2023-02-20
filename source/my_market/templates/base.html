@@ -27,13 +27,13 @@
 
 <div id="header">
     <div id="branding">
-        <h1 id="site-name"><a href="/">My Market</a></h1>
+        <h1 id="site-name"><a href="{% url 'home' %}">My Market</a></h1>
     </div>
     <div id="user-tools">
-        <a href="/">Products</a> |
+        <a href="{% url 'home' %}">Products</a> |
         <a href="#">Categories</a> |
-        <a href="/add/product/">Add Product</a> |
-        <a href="#">Add Category</a>
+        <a href="{% url 'add_product' %}">Add Product</a> |
+        <a href="{% url 'add_category' %}">Add Category</a>
     </div>
 </div>
 <div class="breadcrumbs">
