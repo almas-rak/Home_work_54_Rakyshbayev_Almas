@@ -1,22 +1,22 @@
 {% extends 'base.html' %}
 {% block content %}
 
-    {% for product in products  %}
-    <div class="card-main">
-        <div class="cont-image-main-card">
-            <img src="{{ product.image.url}}" alt="image" class="image-main-card">
-        </div>
-        <div class="description-card-main">
-            <h2>{{product.product_name}}</h2>
-            <p>{{product.category}}</p> <br>
-            <h1>price: {{product.price}}$</h1>
-            <br>
-            
-            
-            <a href="" class="see-more">see more...</a>
-        </div>
-        
-        
+{% for product in products  %}
+<div class="card-main">
+    <div class="cont-image-main-card">
+        <img src="{{ product.image.url}}" alt="image" class="image-main-card">
     </div>
-    {% endfor %}
+    <div class="description-card-main">
+        <h2>{{product.product_name}}</h2>
+        <p>{{product.category}}</p> <br>
+        <h1>price: {{product.price}}$</h1>
+        <br>
+
+
+        <a href="{% url 'detail_view_product' product.pk %}" class="see-more">see more...</a>
+    </div>
+
+
+</div>
+{% endfor %}
 {% endblock content %}

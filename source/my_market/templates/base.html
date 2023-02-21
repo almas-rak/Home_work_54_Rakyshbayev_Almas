@@ -20,29 +20,29 @@
     <script src="{% static 'js/prepopulate.js' %}"></script>
     <script src="{% static 'js/vendor/xregexp/xregexp.js' %}"></script>
     <link rel="stylesheet" href="{% static 'css/responsive.css' %}">
-    
+
     <link rel="stylesheet" href="{% static 'css/style.css' %}">
 </head>
 <body>
-    
-        <div id="header">
-            <div id="branding">
-                <h1 id="site-name"><a href="/">My Market</a></h1>
-            </div>
-            <div id="user-tools">
-                <a href="#">Products</a> |
-                <a href="#">Categories</a> |
-                <a href="/add/product/">Add Product</a> |
-                <a href="#">Add Category</a>
-            </div>
-        </div>
-        <div class="breadcrumbs">
-        </div>
-        <div  class="container">
-            
-            
-                {% block content %}{% endblock content %}
-            
-        </div>
+
+<div id="header">
+    <div id="branding">
+        <h1 id="site-name"><a href="{% url 'home' %}">My Market</a></h1>
+    </div>
+    <div id="user-tools">
+        <a href="{% url 'home' %}">Products</a> |
+        <a href="#">Categories</a> |
+        <a href="{% url 'add_product' %}">Add Product</a> |
+        <a href="{% url 'add_category' %}">Add Category</a>
+    </div>
+</div>
+<div class="breadcrumbs">
+</div>
+<div class="container">
+
+
+    {% block content %}{% endblock content %}
+
+</div>
 </body>
 </html>
