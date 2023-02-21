@@ -21,7 +21,7 @@ admin.site.register(Product, ProductAdmin)
 
 class CategoryProductAdmin(admin.ModelAdmin):
     list_display = ('id', 'category_name', 'description')
-    list_editable = ('category_name', 'description')
+    # list_editable = ('category_name', 'description')
 
 
 admin.site.register(Category, CategoryProductAdmin)

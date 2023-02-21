@@ -48,6 +48,19 @@ body{
     height: 200px;
     margin: 5px;
 }
-p{
-    display: inline-block;
+.table-category{
+    width: 80%;
+}
+
+.submit-row{
+width: 50px;
+}
+
+.deletelink-pox{
+width: 100%;
+}
+
+.button-link{
+width:50px;
+color:#fafbfb;
 }

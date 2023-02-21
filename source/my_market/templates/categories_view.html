@@ -1,0 +1,42 @@
+{% extends 'base.html' %}
+{% block title %}Categories{% endblock title %}
+{% block content %}
+
+<table class="table-category">
+    <thead>
+    <tr>
+        <th scope="col" class="sortable column-category_name">
+            <div class="text">
+                <p>Category</p>
+            </div>
+        </th>
+        <th scope="col" class="sortable column-actions">
+            <div class="text">
+                <p>actions</p>
+            </div>
+        </th>
+    </tr>
+    </thead>
+    <tbody>
+    {% for category in categories %}
+    <tr>
+
+        <th class="field-category_name">
+            <a href="">{{ category.category_name }}</a>
+        </th>
+        <td class="submit-row">
+            <p class="button">
+                <a href="{% url 'edit_category' category.pk %}" class="button-link">Edit</a>
+            </p>
+        </td>
+        <td class="submit-row">
+            <p class="deletelink-pox">
+                <a href="" class="deletelink">Delete</a>
+            </p>
+        </td>
+
+    </tr>
+    {% endfor %}
+    </tbody>
+</table>
+{% endblock content %}
